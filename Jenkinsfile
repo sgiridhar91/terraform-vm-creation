@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        ARM_SUBSCRIPTION_ID = "956bb615-2864-44be-aa40-3e5bd6ef654f"
-        ARM_CLIENT_ID       = "9cf4b57b-6b15-41fb-aead-a87aff7fe6e4"
-        ARM_TENANT_ID       = "3a532a72-e615-4eca-9fc8-311daaae64a2"
+        export ARM_CLIENT_ID="fccbe0bd-2e6a-46c5-a360-11441a52da03"
+export ARM_TENANT_ID="d90b060c-4168-4e78-91aa-d4dce4a21e27"
+export ARM_SUBSCRIPTION_ID="956bb615-2864-44be-aa40-3e5bd6ef654f"
     }
     stages {
         stage('Checkout code') {
