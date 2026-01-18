@@ -1,10 +1,11 @@
 pipeline {
     agent any
-    environment {
-        export ARM_CLIENT_ID="fccbe0bd-2e6a-46c5-a360-11441a52da03"
-export ARM_TENANT_ID="d90b060c-4168-4e78-91aa-d4dce4a21e27"
-export ARM_SUBSCRIPTION_ID="956bb615-2864-44be-aa40-3e5bd6ef654f"
-    }
+       environment {
+        ARM_CLIENT_ID       = credentials('client-id')
+        ARM_CLIENT_SECRET   = credentials('client-secret')
+        ARM_SUBSCRIPTION_ID = credentials('subscription-id')
+        ARM_TENANT_ID       = credentials('tenant-id')
+        }
     stages {
         stage('Checkout code') {
             steps {
